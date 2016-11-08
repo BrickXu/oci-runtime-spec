@@ -100,17 +100,17 @@
   * **`height`** (uint, REQUIRED)
   * **`width`** (uint, REQUIRED)
 * **`cwd`** (string, REQUIRED) 为可执行文件设置工作目录。此值 **必须** 是绝对路径。
-* **`env`** (array of strings, OPTIONAL) 包含一组在进程执行前设置到其环境中的变量。数组里的元素指定为“KEY=value”格式的字符串。左侧（KEY） *必须* 只包含字母，数字和下划线_，如[IEEE Std 1003.1-2001](http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap08.html).
+* **`env`** (array of strings, OPTIONAL) 包含一组在进程执行前设置到其环境中的变量。数组里的元素指定为“KEY=value”格式的字符串。左侧（KEY） **必须** 只包含字母，数字和下划线`_`，如[IEEE Std 1003.1-2001](http://pubs.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap08.html).
 * **`args`** (array of strings, REQUIRED) 可执行文件和一组标志（flags）。可执行文件是第一个数组的第一个元素，并且 **必须** 存在于给定的路径里。如果可执行文件的路径不是绝对路径，则通过$PATH查找可执行文件。
 
 对于基于Linux的系统，进程结构支持以下特定字段：
 
-* **`capabilities`** (array of strings, OPTIONAL) capabilities是一个数组，用于指定可以提供给容器内部进程的capabilities。有效值均是字符串，且定义在[the man page](http://man7.org/linux/man-pages/man7/capabilities.7.html)
+* **`capabilities`** (array of strings, OPTIONAL) capabilities是一个数组，用于指定可以提供给容器内部进程的capabilities。有效值均是字符串，且定义在[the man page](http://man7.org/linux/man-pages/man7/capabilities.7.html)。
 * **`rlimits`** (array of rlimits, OPTIONAL) rlimits is an array of rlimits that allows setting resource limits for a process inside the container.
 The kernel enforces the `soft` limit for a resource while the `hard` limit acts as a ceiling for that value that could be set by an unprivileged process.
 Valid values for the 'type' field are the resources defined in [the man page](http://man7.org/linux/man-pages/man2/setrlimit.2.html).
-* **`apparmorProfile`** (string, OPTIONAL) 指定容器使用的apparmor配置文件名字。有关Apparmor的更多信息，请参考[Apparmor documentation](https://wiki.ubuntu.com/AppArmor)
-* **`selinuxLabel`** (string, OPTIONAL) 指定容器内进程运行时使用的SELinux标签。有关SELinux的更多信息，请参考[Selinux documentation](http://selinuxproject.org/page/Main_Page)
+* **`apparmorProfile`** (string, OPTIONAL) 指定容器使用的apparmor配置文件名字。有关Apparmor的更多信息，请参考[Apparmor documentation](https://wiki.ubuntu.com/AppArmor)。
+* **`selinuxLabel`** (string, OPTIONAL) 指定容器内进程运行时使用的SELinux标签。有关SELinux的更多信息，请参考[Selinux documentation](http://selinuxproject.org/page/Main_Page)。
 * **`noNewPrivileges`** (bool, OPTIONAL) 将noNewPrivileges设置成true可以阻止容器内的进程申请额外的权限。
 [The kernel doc](https://www.kernel.org/doc/Documentation/prctl/no_new_privs.txt)上有更多关于该功能如何使用prctl系统调用实现的信息。
 
