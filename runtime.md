@@ -106,7 +106,3 @@
 ## 钩子（Hooks）
 
 在本规范中提到的许多操作，都允许在每个操作之前或之后采取附加动作的“钩子”。更多“钩子”的信息请请参考[运行时配置](./config.md#hooks)。
-
-## 引用
-
-https://github.com/opencontainers/runtime-spec/blob/master/runtime.md

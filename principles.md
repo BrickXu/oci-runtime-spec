@@ -31,9 +31,3 @@
 ## 工业级交付（Industrial-grade delivery）
 
 标准容器使软件的工业级交付成为现实。利用上述所有的属性，标准容器使大，小型企业能够简化和自动化其软件交付途径。不论是内部的devops流程，还是外部的基于客户的软件交付机制，标准容器正在改变社区对软件打包和交付的想法。
-
-
-
-## 引用
-
-原文链接：https://github.com/opencontainers/runtime-spec/blob/master/principles.md

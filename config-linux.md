@@ -435,8 +435,8 @@ Each entry has the following structure:
 
 * **`priorities`** *(array, OPTIONAL)* - specifies a list of objects of the priorities assigned to traffic originating from processes in the group and egressing the system on various interfaces.
   The following parameters can be specified per-priority:
-    * **`name`** *(string, REQUIRED)* - interface name
-    * **`priority`** *(uint32, REQUIRED)* - priority applied to the interface
+    * **`name`** *(string, REQUIRED)* - 网卡名字
+    * **`priority`** *(uint32, REQUIRED)* - 应用在此网卡的优先级
 
 ###### Example
 
@@ -489,7 +489,7 @@ Each entry has the following structure:
 
 ## seccomp
 
-Seccomp provides application sandboxing mechanism in the Linux kernel.
+Seccomp在Linux内核中为应用程序提供了沙盒机制。
 Seccomp configuration allows one to configure actions to take for matched syscalls and furthermore also allows matching on values passed as arguments to syscalls.
 For more information about Seccomp, see [Seccomp kernel documentation](https://www.kernel.org/doc/Documentation/prctl/seccomp_filter.txt)
 The actions, architectures, and operators are strings that match the definitions in seccomp.h from [libseccomp](https://github.com/seccomp/libseccomp) and are translated to corresponding values.
