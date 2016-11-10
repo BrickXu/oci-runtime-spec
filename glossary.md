@@ -19,8 +19,8 @@ On Linux, a leaf in the [namespace][namespaces.7] hierarchy in which the [config
 
 ## JSON
 
-所有配置的[JSON][] *必须* 经过 [UTF-8][] 编码。
-JSON对象 *一定不能* 有重复的名字。
+所有配置的[JSON][] **必须** 经过 [UTF-8][] 编码。
+JSON对象 **一定不能** 有重复的名字。
 JSON对象中的条目顺序不重要。
 
 ## Runtime
